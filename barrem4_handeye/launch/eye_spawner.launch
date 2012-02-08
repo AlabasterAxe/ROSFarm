@@ -1,0 +1,17 @@
+<launch>
+	<!-- From dynamixel_tutorials/launch/controller_spawner.launch  -->
+	
+	<!-- Load controller configuration to parameter server -->
+	<rosparam file="$(find barrem4_handeye)/config/eye_servos.yaml" command="load"/>
+
+	<!-- start specified joint controllers -->
+	<node name="eye_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+		args="
+			--manager=eye_manager
+			--port=eye_port
+			--type=simple
+			pan_controller
+			tilt_controller"
+		output="screen">
+	</node>
+</launch>

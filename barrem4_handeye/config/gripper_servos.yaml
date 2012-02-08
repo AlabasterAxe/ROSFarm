@@ -1,0 +1,35 @@
+right_gripper_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: right_gripper_joint
+    joint_max_speed: 1
+    joint_speed: .6
+    joint_torque_limit: 1
+    joint_compliance_slope: 20
+    joint_compliance_margin: 2
+    joint_compliance_punch:  128
+    motor:
+        id: 4
+        init: 512
+        min: 0
+        max: 1023
+
+left_gripper_controller:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: left_gripper_joint
+    joint_max_speed: 1
+    joint_speed: .6
+    joint_torque_limit: 1
+    joint_compliance_slope: 20
+    joint_compliance_margin: 2
+    joint_compliance_punch:  128
+    motor:
+        id: 5
+        init: 512
+        min: 0
+        max: 1023

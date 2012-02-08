@@ -1,0 +1,17 @@
+<launch>
+	<!-- From dynamixel_tutorials/launch/controller_spawner.launch  -->
+
+	<!-- Load controller configuration to parameter server -->
+	<rosparam file="$(find barrem4_handeye)/config/gripper_servos.yaml" command="load"/>
+
+	<!-- start specified joint controllers -->
+	<node name="gripper_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+		args="
+			--manager=gripper_manager
+			--port=gripper_port
+			--type=simple
+			left_gripper_controller
+			right_gripper_controller"
+		output="screen">
+	</node>
+</launch>

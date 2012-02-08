@@ -1,0 +1,4 @@
+<launch>
+	<node name="publisher" pkg="barrem4_handeye" type="publisher" required="true" output="screen" />
+	<node name="subscriber" pkg="barrem4_handeye" type="subscriber" required="true" output="screen" />
+</launch>

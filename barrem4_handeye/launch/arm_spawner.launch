@@ -1,0 +1,18 @@
+<launch>
+	<!-- From dynamixel_tutorials/launch/controller_spawner.launch  -->
+	
+	<!-- Load controller configuration to parameter server -->
+	<rosparam file="$(find barrem4_handeye)/config/arm_servos.yaml" command="load"/>
+
+	<!-- start specified joint controllers -->
+	<node name="arm_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+		args="
+			--manager=arm_manager
+			--port=arm_port
+			--type=simple
+			shoulder_controller
+			elbow_controller
+			wrist_controller"
+		output="screen">
+	</node>
+</launch>
