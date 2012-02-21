@@ -1,0 +1,19 @@
+<package>
+  <description brief="ros_farm">
+
+     ros_farm
+
+  </description>
+  <author>Ibanez Daniel A.</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/ros_farm</url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="cv_bridge"/>
+  <depend package="dynamixel_controllers"/>
+
+</package>
+
+
